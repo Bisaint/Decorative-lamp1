@@ -1,0 +1,50 @@
+<!--index.wxml-->
+<!--
+<view class='main-wraper'>
+    <navBar title='天气模式' background='#1AA094' color='#fff' back="{{true}}" home="{{true}}" iconTheme='white' bindback="handlerGobackClick" bindhome="handlerGohomeClick"></navBar>
+</view>
+-->
+<image src="../../images/bj4.jpg" class="bg"></image>
+<view class="container">
+  <view class="nowWeather">
+    <view class="city w">{{city}} {{district}}</view>
+    <view class="road w">{{street}}</view>
+    <view class="temp w b">{{tmp}}°</view>
+    <view class="weather w">{{txt}} | 空气 {{qlty}}</view>
+  </view>
+ 
+  <view class="weahterDetail">
+    <view class="">
+      <view class="w center">{{dir}}</view>
+      <view wx:if="{{sc == '微风'}}" class="w b center f50">微风</view>
+      <view wx:else class="w b center f50">{{sc}}级</view>
+    </view>
+    <view class="l"></view>
+    <view class="">
+      <view class="w center">相对湿度</view>
+      <view class="w b center f50">{{hum}}%</view>
+    </view>
+    <view class="l"></view>
+    <view class="">
+      <view class="w center">体感温度</view>
+      <view class="w b center f50">{{fl}}°</view>
+    </view>
+  </view>
+</view>
+<view wx:key="item" wx:for-items="{{daily_forecast}}" wx:for-index="i">
+  <view class="hor forcast">
+   <view class="day">{{day[i]}}</view>
+    <view class="hor">
+     <image class="img" src="../../images/icons/{{item.cond_code_d}}.png"></image>
+      <view class="center">{{item.cond_txt_d}}|{{qlty}}</view>
+    </view>
+    <view class="tmp">最低{{item.tmp_min}}°/ 最高{{item.tmp_max}}°</view>
+  </view>
+</view>
+<view class='notice-wrap' hidden='{{hideNotice}}'>
+  <image class="img" style="position:absolute;" src=""></image>
+　　<view class='tongzhitext'>
+　　　　<text class="tongzhi-text">{{notice}}</text>
+　　</view>
+　　<!--<view bindtap='switchNotice' class="closeView">x</view>-->
+</view>

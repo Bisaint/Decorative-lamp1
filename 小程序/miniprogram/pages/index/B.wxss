@@ -1,0 +1,138 @@
+/**index.wxss**/
+ 
+/**common css**/
+.w{
+  color: white;
+
+}
+.b{
+  font-weight: bold;
+}
+ 
+.l{
+  border: 1rpx solid #fff;
+}
+ 
+.center{
+  text-align: center;
+  margin: auto 0;
+}
+
+ .day{
+  text-align: center;
+  margin: auto 0;
+  width: 20%;
+}
+ .tmp{
+  text-align: center;
+  margin: auto 0;
+  width: 50%;
+  margin-left: 25rpx;
+}
+.hor{
+  display: flex;
+}
+ 
+.f50{
+  font-size: 50rpx;
+}
+ 
+/**index css**/
+ 
+ 
+.bg {
+  width: 100%;
+  height: 700rpx;
+}
+ 
+.temp{
+  font-size: 170rpx;
+}
+ 
+.container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  height: 700rpx;
+  display: block;
+}
+
+.nowWeather{
+  padding: 60rpx;
+}
+
+.weahterDetail{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 50rpx;
+}
+ 
+.forcast{
+  padding: 30rpx;
+  margin-left: 16rpx;
+  margin-right: 16rpx;
+  border-bottom: 1rpx solid #eee;
+
+}
+
+
+.img{
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 16rpx;
+}
+
+
+@keyframes remindMessage {
+  0% {
+    -webkit-transform: translateX(90%);
+  }
+
+  100% {
+    -webkit-transform: translateX(-180%);
+  }
+}
+
+.tongzhitext {
+  /* margin-right:80rpx; */
+  margin-left: 60rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  height: 22px;
+}
+
+.tongzhi-text {
+  font-size: 30rpx;
+  animation: remindMessage 14s linear infinite;
+  width: 100%;
+  color: #000000;
+  display: block;
+  margin-top: 5rpx;
+}
+
+.notice-wrap {
+  background: rgb(245, 241, 240);
+  width: 100%;
+  height: 60rpx;
+  line-height: 10rpx;
+  color: #d09868;
+  font-size: 28rpx;
+}
+
+.closeView {
+  width: 45rpx;
+  height: 45rpx;
+  line-height: 45rpx;
+  position: absolute;
+  right: 20rpx;
+  top: 5rpx;
+  text-align: center;
+  font-size: 35rpx;
+}

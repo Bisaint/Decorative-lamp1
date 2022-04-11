@@ -1,0 +1,10 @@
+<view class='main-wraper'>
+    <navBar title='LED控制' background='#1AA094' color='#fff' back="{{flase}}" home="{{flase}}" iconTheme='white' bindback="handlerGobackClick" bindhome="handlerGohomeClick"></navBar>
+</view>
+<button bindtap="AS" style="position: relative; left: 0rpx; top: 104rpx; background-color: rgba(216, 216, 216, 0); box-shadow: 2px 2px 4px 1px #8686868e; width: 357rpx; height: 106rpx; display: block; box-sizing: border-box">RGB自定义</button>
+<button bindtap="MUSIC" style="position: relative; left: 0rpx; top: 263rpx; background-color: rgba(216, 216, 216, 0); box-shadow: 2px 2px 4px 1px #8686868e; width: 357rpx; height: 106rpx; display: block; box-sizing: border-box">音乐跟随</button>
+<button bindtap="BS" style="position: relative; left: 0rpx; top: 422rpx; background-color: rgba(216, 216, 216, 0); box-shadow: 2px 2px 4px 1px #8686868e; width: 357rpx; height: 106rpx; display: block; box-sizing: border-box">天气模式</button>
+<button bindtap="AD" style="position: relative; left: 0rpx; top: 582rpx; background-color: rgba(216, 216, 216, 0); box-shadow: 2px 2px 4px 1px #8686868e; width: 357rpx; height: 106rpx; display: block; box-sizing: border-box">美颜模式</button>
+
+
+

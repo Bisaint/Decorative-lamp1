@@ -1,0 +1,43 @@
+<view class='main-wraper'>
+    <navBar title='RGB' background='#1AA094' color='#fff' back="{{true}}" home="{{true}}" iconTheme='white' bindback="handlerGobackClick" bindhome="handlerGohomeClick"></navBar>
+</view>
+<!--index.wxml-->
+<view>
+  <view class="page__hd">
+    <view class="page__title">Color picker</view>
+    <view class="page__desc">点击色块取色</view>
+  </view>
+  <view style="background:{{rgb}}; box-shadow: 2px 2px 4px 1px #8686868e;" bindtap="toPick" class="color-block">{{rgb}}</view>
+<color-picker bindchangeColor="pickColor" initColor="{{rgb}}" show="{{pick}}" />
+</view>
+<view class="tui-content" style="position: absolute; left: 411rpx; top: -442rpx; width: 289rpx; height: 176rpx; display: flex; box-sizing: border-box">
+  <radio-group class="radio-group" bindchange="radioChangeX">
+    <label class="radio" wx:for="{{itemsX}}">
+      <view class="tui-menu-list"><radio color="#007aff" value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}</view>
+    </label>
+  </radio-group>
+  <view class="tui-show-name">
+    {{radioStrX}}
+  </view>
+</view>
+
+<button bindtap="UPDAA" style="position: relative; left: 0rpx; top: 436rpx; background-color: rgba(216, 216, 216, 0); box-shadow: 2px 2px 4px 1px #8686868e; width: 357rpx; height: 106rpx; display: block; box-sizing: border-box">上传</button>
+<button bindtap="OPEN" style="position: relative; left: -207rpx; top: -24rpx; background-color: rgba(216, 216, 216, 0); box-shadow: 2px 2px 4px 1px #8686868e; width: 225rpx; height: 106rpx; display: block;border-radius: 40rpx; box-sizing: border-box">开灯</button>
+<button bindtap="OFF" style="position: relative; left: -207rpx; top: 33rpx; background-color: rgba(216, 216, 216, 0); box-shadow: 2px 2px 4px 1px #8686868e; width: 225rpx; height: 106rpx; display: block; border-radius: 40rpx; box-sizing: border-box">关灯</button>
+<view class="neC"style="width:180rpx">
+  <text>连接状态</text>
+</view>
+<view class="neD"style="width:130rpx">
+  <text>{{A_status}}</text>
+</view>
+<view class="neQQ"style="width:200rpx">{{XXA}} </view>
+<view class="neQ"style="width:200rpx">
+  <text>当前颜色:</text>
+</view>
+<view class="neT"style="width:200rpx">
+  <text>依次时间:</text>
+</view>
+<input class="neTT"style="width:200rpx"bindinput="AS"value="{{XS}}"placeholder="ms/毫秒"> </input>
+<view class="ness"style="width:400rpx">
+  <text>记得关灯才可使用其他模式</text>
+</view>
